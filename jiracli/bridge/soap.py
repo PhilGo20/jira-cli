@@ -66,7 +66,7 @@ class JiraSoapBridge(JiraBridge):
             "priority": self.get_priorities()[priority.lower()]["id"]
         }
         if type.lower() == 'epic':
-            issue['customfield_11401'] = summary
+            issue['customfield_10401'] = summary
         try:
             if parent:
                 issue['type'] = self.get_subtask_issue_types()[type.lower()]['id'],
